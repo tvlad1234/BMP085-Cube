@@ -1,5 +1,5 @@
 # BMP085-Cube
-*BMP085/BMP180 Library for STM32Cube*
+*BMP085/BMP180 Library for STM32Cube*\
 Based on [Adafruit-BMP085-Library](https://github.com/adafruit/Adafruit-BMP085-Library)
 ## Usage
 **Modify `#include "stm32f0xx_hal.h"` in _bmp085.h_ to match your configuration.**
