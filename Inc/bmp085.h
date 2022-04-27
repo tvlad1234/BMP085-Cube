@@ -14,7 +14,7 @@
 // Sensor Init function
 uint8_t bmpBegin(uint8_t mode, I2C_HandleTypeDef *i2cdev);
 
-float readTemperature(void);
-int32_t readPressure(void);
+float readBMPTemperature(void);
+int32_t readBMPPressure(void);
 
 #endif /* _BMP085_H */

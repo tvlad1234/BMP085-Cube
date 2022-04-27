@@ -94,14 +94,14 @@ int32_t computeB5(int32_t UT)
   return X1 + X2;
 }
 
-uint16_t readRawTemperature(void)
+uint16_t readBMPRawTemperature(void)
 {
   bmpWrite8(BMP085_CONTROL, BMP085_READTEMPCMD);
   HAL_Delay(5);
   return bmpRead16(BMP085_TEMPDATA);
 }
 
-uint32_t readRawPressure(void)
+uint32_t readBMPRawPressure(void)
 {
   uint32_t raw;
 
@@ -125,12 +125,12 @@ uint32_t readRawPressure(void)
   return raw;
 }
 
-float readTemperature(void)
+float readBMPTemperature(void)
 {
   int32_t UT, B5; // following ds convention
   float temp;
 
-  UT = readRawTemperature();
+  UT = readBMPRawTemperature();
 
   B5 = computeB5(UT);
   temp = (B5 + 8) >> 4;
@@ -139,13 +139,13 @@ float readTemperature(void)
   return temp;
 }
 
-int32_t readPressure(void)
+int32_t readBMPPressure(void)
 {
   int32_t UT, UP, B3, B5, B6, X1, X2, X3, p;
   uint32_t B4, B7;
 
-  UT = readRawTemperature();
-  UP = readRawPressure();
+  UT = readBMPRawTemperature();
+  UP = readBMPRawPressure();
 
   B5 = computeB5(UT);
 

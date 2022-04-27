@@ -9,7 +9,7 @@ _Example:_ `bmpBegin(BMP085_STANDARD, &hi2c1);`\
 Other usable modes are `BMP085_ULTRALOWPOWER`,  `BMP085_HIGHRES`,  `BMP085_ULTRAHIGHRES.` 
 
 ### Reading the sensor
-`readTemperature()` returns the temperature in °C as _float_.
-`readPressure()` returns the atmospheric pressure in Pascals (Pa) as _uint32_t_.
+`readBMPTemperature()` returns the temperature in °C as _float_.
+`readBMPPressure()` returns the atmospheric pressure in Pascals (Pa) as _uint32_t_.
 
 
